@@ -90,26 +90,44 @@ export default {
 
 </script>
 
-<style>
-.todo-btn{
-  color: #2D3047;
-  background: #1B998B;
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+.quiz-btn{
+  color: #22577a;
+  background: #b8f2e6;
   margin: 0px 6px !important;
+  outline: none !important;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+}
+.quiz-btn:focus{
+  outline: none !important;
+  box-shadow: none !important;
+  color: #22577a !important;
+  background: #7FFF00 !important;
+}
+.btn-secondary {
+  color: blue;
+  background: #87CEFA;
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
   outline: none !important;
   border: none;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
 }
-
-.todo-btn:focus{
+.btn-secondary:focus{
   outline: none !important;
   box-shadow: none !important;
-  color: #2D3047 !important;
-  background: #60ecff!important;
+  color: #87CEFA!important;
+  background: #87CEFA!important;
 }
-.todo-btn:hover {background-color: #0af05e}
+.btn-secondary:hover {background-color: white}
 
-.todo-btn:active{
+.btn-secondary:active{
   background: #60ecff!important;
   transform: translateY(4px);
   box-shadow: none !important;

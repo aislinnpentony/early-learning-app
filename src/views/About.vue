@@ -38,8 +38,9 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .quiz-btn{
-  color: #22577a;
-  background: #b8f2e6;
+  color: #22577a; 
+  background-color: #22577a; 
+  background: #87CEFA!important;
   margin: 0px 6px !important;
   outline: none !important;
   border: none;
@@ -49,7 +50,7 @@ export default {
   outline: none !important;
   box-shadow: none !important;
   color: #22577a !important;
-  background: #7FFF00 !important;
+  background: #22577a!important;
 }
 .btn-secondary {
   color: blue;

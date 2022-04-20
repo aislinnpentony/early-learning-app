@@ -10,3 +10,17 @@
         </p>
     </div>
 </template>
+
+<script>
+</script>
+
+<style>
+:root{ 
+
+}
+
+.background{
+    background: #22577a; 
+}
+
+</style>

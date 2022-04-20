@@ -2,15 +2,18 @@ import firebase from 'firebase'
 import firestore from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCUYaL_ubdplom_YaA79N9GZzXdAVwH3TE",
-  authDomain: "early-learning-db.firebaseapp.com",
-  databaseURL: "https://early-learning-db.firebaseio.com",
-  projectId: "early-learning-db",
-  storageBucket: "early-learning-db.appspot.com",
-  messagingSenderId: "866922377904"
-};
+  apiKey: "AIzaSyCUuXxisY9-_GEB-EtyDVVSIYynHLBLeoo",
+  authDomain: "early-learning-app-db.firebaseapp.com",
+  projectId: "early-learning-app-db",
+  storageBucket: "early-learning-app-db.appspot.com",
+  messagingSenderId: "544480238540",
+  appId: "1:544480238540:web:d3e0203b2c1ff4d6775b69",
+  measurementId: "G-738TJGHNHX"
+}
 
 const firebaseApp = firebase.initializeApp(config);
 firebaseApp.firestore().settings({ timestampsInSnapshots: true })
 
+const db = firebase.App.firestore()
+const usersCollection = db.collection('users')
 export default firebaseApp.firestore()
