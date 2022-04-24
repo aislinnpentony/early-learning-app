@@ -26,7 +26,7 @@ export default {
     goToToEnglish() {
       this.$router.push('/user/P1/EnglishSheet')
     },
-    goToToScience() {
+     goToToScience() {
       this.$router.push('/user/P1/ScienceSheet')
   }
 }
