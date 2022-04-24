@@ -5,8 +5,9 @@
     <button type="button" class="btn quiz-btn btn-secondary" @click="goToToMath">Math</button>
     <button type="button" class="btn quiz-btn btn-secondary" @click="goToToEnglish">English</button>
     <button type="button" class="btn quiz-btn btn-secondary" @click="goToToScience">Science</button>
-    <carousel></carousel>
-
+    <br>
+    <br>
+    <img class="about-pic" src="/about.png"  />
   </div>
 </template>
 

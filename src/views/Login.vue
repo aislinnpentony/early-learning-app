@@ -12,23 +12,24 @@
       </div>
       <p v-if="feedback" class="red-text center">{{ feedback }}</p>
       <div class="field center">
-        <button class="btn todo-btn btn-secondary">Login</button>
+        <button class="btn todo-btn" @click="goToWelcome">Login</button>
       </div>
-       <p class="forgot-password mt-2 mb-4">
+       <p class="forgot-password">
                 <router-link to="/ForgotPassword">Forgotten password?</router-link>
             </p>
     </form>
       <div class="field center">
       <button v-on:click="googleLogin" class="social-button">
-        <img alt="Google Logo" src="/assets/google-logo.png">
+        <img alt="Google Logo" src="../assets/google-logo.png">
       </button>
       </div>
   </div>
 </template>
 
 <script>
-// import firebase from 'firebase'
-// import db from '@/firebase/init'
+
+//import firebase from 'firebase'
+//import db from '/firebase/init'
 export default {
   name: 'Login',
   data () {
@@ -39,13 +40,12 @@ export default {
     }
   },
   methods: {
-      //option to login using google signin
     googleLogin () {
       const provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithPopup(provider).then((result) => {
         console.log(result)
         console.log('Success Google Account Linked')
-        this.$router.replace('Home')
+        this.$router.replace('Welcome')
       }).catch((err) => {
         alert('Oops. ' + err.message)
         console.log(Failed)
@@ -55,25 +55,21 @@ export default {
     login () {
       if (this.email && this.password) {
         this.feedback = null
-        firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-          .then(user => {
-            console.log('user data: ', {user})
-            this.$router.push({ name: 'Home' })
-          }).catch(err => {
-            this.feedback = err.message
-          })
+        this.goToWelcome()
       } else {
-        this.feedback = 'Please fill in both fields'
+        this.feedback = 'Please fill in both fields' 
       }
+    },
+
+    goToWelcome() {
+      this.$router.push('/Welcome');
+    },
     }
   }
-}
 
 </script>
 
 <style>
-
-
 .login{
   max-width: 400px;
   margin-top: 60px;
@@ -96,45 +92,4 @@ export default {
   .social-button img {
     width: 100%;
   }
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-.quiz-btn{
-  color: #22577a;
-  background: #b8f2e6;
-  margin: 0px 6px !important;
-  outline: none !important;
-  border: none;
-  font-family: "Quicksand", sans-serif;
-}
-.quiz-btn:focus{
-  outline: none !important;
-  box-shadow: none !important;
-  color: #22577a !important;
-  background: #7FFF00 !important;
-}
-.btn-secondary {
-  color: blue;
-  background: #87CEFA;
-  margin-top: 10px;
-  padding: 10px 25px;
-  font-size: 14px;
-  text-align: center;
-  cursor: pointer;
-  outline: none !important;
-  border: none;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-}
-.btn-secondary:focus{
-  outline: none !important;
-  box-shadow: none !important;
-  color: #87CEFA!important;
-  background: #87CEFA!important;
-}
-.btn-secondary:hover {background-color: white}
-
-.btn-secondary:active{
-  background: #60ecff!important;
-  transform: translateY(4px);
-  box-shadow: none !important;
-}
 </style>

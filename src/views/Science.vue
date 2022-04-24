@@ -1,9 +1,14 @@
 <template>
     <div>
         <h1>Science</h1>
-        <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
+        <br>
         <p>Enjoy a new interactive way to develop upon your Chemistry, Physics and Biology kowledge</p>
         <p>Through numerous different activites for each topic area students will find a new love for Science!!</p>
+        <br>
+        <img class="science-pic" src="/science.png"  />
+        <br>
+        <br>
+        <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
     </div>
 </template>
 

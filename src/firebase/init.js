@@ -1,5 +1,5 @@
 import firebase from 'firebase'
-import firestore from 'firebase/firestore'
+import 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUuXxisY9-_GEB-EtyDVVSIYynHLBLeoo",
@@ -11,9 +11,9 @@ const firebaseConfig = {
   measurementId: "G-738TJGHNHX"
 }
 
-const firebaseApp = firebase.initializeApp(config);
-firebaseApp.firestore().settings({ timestampsInSnapshots: true })
+const firebaseApp = firebase.initializeApp(Config);
+firebaseApp.firestore().settings({ })
 
-const db = firebase.App.firestore()
+const db = firebase.App.firestore();
 const usersCollection = db.collection('users')
 export default firebaseApp.firestore()

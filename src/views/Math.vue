@@ -1,17 +1,24 @@
 <template>
+
     <div>
         <h1>Math</h1>
-         <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
-        <p>Ealry Leanring provides a fun and interactive platform for students to learn and grow their math skills</p>
+        <br>
+        <p>Ealry Leanring provides a fun and interactive platform for students to learn and grow their math skills.</p>
         <p>Master essential numeracy skills at your own pace at a time and place that suis you</p>
                         <p>Lets make Math fun!! (Well lets try anyways)</p>
         <p>Make use of over 20 interactive worksheets for over 5 topics</p>
         <p>Early Learning allows users to download interactive worksheets onto their desktop for easy access</p>
         <p>Users can also upload these worksheets onto their own dashboard.</p>
+        <br>
+        <img class="math-pic" src="/math.png"  />
+        <br>
+        <br>
+        <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
     </div>
 </template>
 
 <script>
+
 export default {
    components: {
   },
@@ -25,7 +32,7 @@ export default {
      goToToAbout() {
       this.$router.push('/About')
 
-  }
+  },
 }
 }
 </script>
@@ -73,3 +80,7 @@ export default {
   box-shadow: none !important;
 }
 </style>
+
+<style lang="css">
+</style>
+

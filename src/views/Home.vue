@@ -8,6 +8,7 @@
            It also promotes the well-being and career choices of children.
            Early Learning also provides hundreds of published courses to assist homeschooling children around the UK.
         </p>
+        <img class="home-pic" src="/home.png"  />
     </div>
 </template>
 

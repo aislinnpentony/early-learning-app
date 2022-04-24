@@ -1,10 +1,15 @@
 <template>
     <div>
         <h1>English</h1>
-        <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
+        <br>
         <p>Early Learning allows students to expand their knowledge of the English language.</p>
         <p>Watch the world of words come alive with interactive worksheets.</p>
         <p>Watch your children become great writers through playful leanring.</p>
+        <br>
+        <img class="english-pic" src="/english.png"  />
+        <br>
+        <br>
+        <button type="button" class="btn quiz-btn btn-secondary" @click="goToToAbout">Back</button>
     </div>
 </template>
 
